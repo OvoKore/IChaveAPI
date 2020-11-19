@@ -1,0 +1,7 @@
+def decrypt(crypted):
+    return bytes.fromhex(crypted[::-1]).decode('utf-8')
+
+#mysql+pymysql://ichave:passchave@192.168.0.51/dbchave
+SQLALCHEMY_DATABASE_URI = '56671686362646f21353e203e2836313e223931304566716863637371607a3566716863696f2f2a3c6173797d69707b2c6173797d6'
+#Sobre o presente tcc: ainda não terminei.
+JWT_SECRET_KEY = '121647562736563702275607573702983ca39756b44756273656359657171416373716051a2c'
