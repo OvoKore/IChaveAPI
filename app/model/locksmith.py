@@ -1,8 +1,7 @@
 from app.model import db
 from flask import current_app
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, exists, and_
+from sqlalchemy import Column, Integer, String, Boolean, exists, and_
 from passlib.hash import pbkdf2_sha512
-from datetime import datetime
 
 class Locksmith(db.Model):
 

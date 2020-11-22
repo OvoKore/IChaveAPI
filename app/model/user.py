@@ -1,8 +1,7 @@
 from app.model import db
 from flask import current_app
-from sqlalchemy import Column, Integer, String, DateTime, Date, exists
+from sqlalchemy import Column, Integer, String, Date, exists
 from passlib.hash import pbkdf2_sha512
-from datetime import datetime
 
 class User(db.Model):
     

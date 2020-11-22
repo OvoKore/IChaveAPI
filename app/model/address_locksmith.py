@@ -1,7 +1,5 @@
 from app.model import db
-from sqlalchemy import Column, Integer, String, DateTime, Float, Boolean, ForeignKey
-from sqlalchemy.orm import relationship
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
 class AddressLochsmith(db.Model):
     
