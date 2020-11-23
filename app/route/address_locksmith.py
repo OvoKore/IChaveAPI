@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, current_app
 from app.serializer.address_locksmith import AddressLocksmithSchema as ma
-from app.model.address_locksmith import AddressLochsmith as md
+from app.model.address_locksmith import AddressLocksmith as md
 from app.jwt import locksmith_required, user_required
 from flask_jwt_extended import get_jwt_identity
 from sqlalchemy import and_

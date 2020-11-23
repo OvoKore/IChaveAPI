@@ -8,7 +8,7 @@ from app.model.address_user import AddressUser
 from app.serializer.address_user import AddressUserSchema
 from app.model.locksmith import Locksmith
 from app.serializer.locksmith import LocksmithSchema
-from app.model.address_locksmith import AddressLochsmith
+from app.model.address_locksmith import AddressLocksmith
 from app.serializer.address_locksmith import AddressLocksmithSchema
 from app.serializer.service import ServiceSchema
 from app.model.service import Service
@@ -27,22 +27,22 @@ def get_locksmith_list():
     if result:
         my_address = json.loads(AddressUserSchema(many=False).dumps(result))
         _filter = and_(
-            AddressLochsmith.uf == my_address['uf'],
-            AddressLochsmith.cidade == my_address['cidade'],
-            AddressLochsmith.active == True,
-            AddressLochsmith.main == True,
-            AddressLochsmith.locksmith_id == Locksmith.id,
+            AddressLocksmith.uf == my_address['uf'],
+            AddressLocksmith.cidade == my_address['cidade'],
+            AddressLocksmith.active == True,
+            AddressLocksmith.main == True,
+            AddressLocksmith.locksmith_id == Locksmith.id,
             Locksmith.status == True
         )
         result = current_app.db.session.query(
-            AddressLochsmith.locksmith_id,
-            AddressLochsmith.cep,
-            AddressLochsmith.uf,
-            AddressLochsmith.cidade,
-            AddressLochsmith.bairro,
-            AddressLochsmith.logradouro,
-            AddressLochsmith.numero,
-            AddressLochsmith.complemento,
+            AddressLocksmith.locksmith_id,
+            AddressLocksmith.cep,
+            AddressLocksmith.uf,
+            AddressLocksmith.cidade,
+            AddressLocksmith.bairro,
+            AddressLocksmith.logradouro,
+            AddressLocksmith.numero,
+            AddressLocksmith.complemento,
             Locksmith.company_name,
             Locksmith.cell_phone
         ).filter(_filter).all()

@@ -1,7 +1,7 @@
 from app.model import db
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
-class AddressLochsmith(db.Model):
+class AddressLocksmith(db.Model):
     
     id = Column(Integer, primary_key=True)
     locksmith_id = Column(Integer, ForeignKey('locksmith.id'), nullable=False)

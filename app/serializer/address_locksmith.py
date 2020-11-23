@@ -1,5 +1,5 @@
 from app.serializer import ma
-from app.model.address_locksmith import AddressLochsmith as md
+from app.model.address_locksmith import AddressLocksmith as md
 
 class AddressLocksmithSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
